@@ -1,0 +1,51 @@
+.body1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+.body2 {
+    background-color: #010108;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+.body1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+button:active{
+    border:none;
+}
+/* Stil für die Uhrzeit */
+#uhrzeit {
+    font-size: 48px;
+    font-weight: bold;
+}
+/* WasserCard Anzeige */
+.customImage{
+    max-width: 75px;
+}
+.customIcon{
+    max-width: 25px;
+}
+.noButton{
+    background-color: transparent;
+    border: none;
+    color: #000;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border:none;
+}
