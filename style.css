@@ -1,20 +1,13 @@
 .body1 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    margin: 0;
+    background-color: #ffffff;
+    color: #212529;
 }
 .body2 {
-    background-color: #010108;
+    background-color: #191919;
     color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    margin: 0;
+   
 }
-.body1 {
+.body {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -26,10 +19,11 @@ button:active{
 }
 /* Stil für die Uhrzeit */
 #uhrzeit {
-    font-size: 48px;
+    font-size: 88px;
     font-weight: bold;
 }
-/* WasserCard Anzeige */
+
+
 .customImage{
     max-width: 75px;
 }

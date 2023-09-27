@@ -11,22 +11,25 @@
 </head>
 <body id="newBody" class="body1">
     <button class="noButton" onclick="changeTheme()"><img class="customIcon" src="img/sunDark.png"></button>
-    <div id="newBody" class="body1">
-        <div class="container text-center">
-            <div class="row">
-                <div class="col-md-6">
-                    <!-- Inhalt des ersten divs -->
-                    <div id="uhrzeit"></div>
-                </div>
-                <div class="col-md-6">
-                <!-- Inhalt des zweiten divs -->
-                    <div id="wasserCard">
-                        <button class="noButton" onclick="addWater()"><img class="customImage" src="img/wasserglas.png"></button>
-                        <p id="anzGetrunken">0.0</p><p>/ 2 L</p>
+    <div class="body">
+        <div id="widgetBody" class="body1">
+            <div class="container text-center">
+                <div class="row">
+                    <div class="col-md-6">
+                        <!-- Inhalt des ersten divs -->
+                        <div id="uhrzeit"></div>
+                    </div>
+                    <div class="col-md-6">
+                    <!-- Inhalt des zweiten divs -->
+                        <div class="pl-5" id="wasserCard">
+                            <button class="noButton" onclick="addWater()"><img class="customImage" src="img/wasserglas.png"></button>
+                            <p id="anzGetrunken">0.0</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+
     </div>
 
 
@@ -36,11 +39,19 @@
     <script>
         function changeTheme(){
             var bodyBack = document.getElementById("newBody")
+            var widgetBack = document.getElementById("widgetBody")
             if (bodyBack.classList.value == "body1"){
+                bodyBack.classList.remove("body1")
                 bodyBack.classList.add("body2")
+
+                widgetBack.classList.remove("body1")
+                widgetBack.classList.add("body2")
             }else if(bodyBack.classList.value == "body2"){
                 bodyBack.classList.remove("body2")
                 bodyBack.classList.add("body1")
+                
+                widgetBack.classList.remove("body2")
+                widgetBack.classList.add("body1")
             }
             console.log(bodyBack)
             debugger
@@ -52,9 +63,10 @@
             var anzGetrunkenFloat = parseFloat(anzGetrunken.innerHTML)
             debugger
             anzGetrunkenFloat += 0.25
-            anzGetrunken.innerHTML = anzGetrunkenFloat
-            if (anzGetrunkenFloat == 2){
+            anzGetrunken.innerHTML = `${anzGetrunkenFloat} 2L`
 
+            if (anzGetrunkenFloat == 2){
+                alert("Ziel Erreicht")
             }
 
         }
