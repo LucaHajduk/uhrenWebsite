@@ -17,6 +17,9 @@
 button:active{
     border:none;
 }
+button:focus {
+    outline: none;
+  }
 /* Stil für die Uhrzeit */
 #uhrzeit {
     font-size: 88px;
